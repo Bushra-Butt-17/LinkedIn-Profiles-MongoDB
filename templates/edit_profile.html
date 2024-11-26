@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS (optional) -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-save {
+            background-color: #007bff;
+            color: white;
+            width: 100%;
+            padding: 10px;
+        }
+        .btn-back {
+            background-color: #6c757d;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Edit {{ profile.name }}'s Profile</h1>
+
+        <div class="form-container">
+            <form method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" value="{{ profile.name }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ profile.email }}" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="headline">Headline:</label>
+                    <input type="text" class="form-control" id="headline" name="headline" value="{{ profile.headline }}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills:</label>
+                    <input type="text" class="form-control" id="skills" name="skills" value="{{ profile.skills | join(', ') }}" required>
+                    <small class="form-text text-muted">Enter skills separated by commas (e.g., Python, MongoDB, Flask).</small>
+                </div>
+
+                <button type="submit" class="btn btn-save btn-lg">Save Changes</button>
+            </form>
+
+            <a href="/profiles" class="btn btn-back btn-lg">Back to all profiles</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

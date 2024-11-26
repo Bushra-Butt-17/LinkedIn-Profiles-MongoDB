@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Profile Management</title>
+    <!-- Link to Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin-top: 30px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .card-header {
+            background-color: #007bff;
+            color: white;
+            font-size: 18px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            padding: 12px 25px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .btn-action {
+            font-size: 14px;
+            border-radius: 8px;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-action:hover {
+            transform: scale(1.05);
+        }
+        .btn-view {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .btn-edit {
+            background-color: #ffc107;
+            color: white;
+        }
+        .btn-delete {
+            background-color: #dc3545;
+            color: white;
+        }
+        .btn-view:hover {
+            background-color: #138496;
+        }
+        .btn-edit:hover {
+            background-color: #e0a800;
+        }
+        .btn-delete:hover {
+            background-color: #c82333;
+        }
+        .table th, .table td {
+            text-align: center;
+        }
+        .table th {
+            background-color: #007bff;
+            color: white;
+        }
+        .table td a {
+            color: white;
+            margin: 0 5px;
+        }
+        .table td a:hover {
+            color: #007bff;
+        }
+        .profile-count {
+            background-color: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .profile-count h5 {
+            font-size: 30px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <!-- Profile Count Section -->
+            <div class="col-md-12 mb-4">
+                <div class="card profile-count">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Profiles</h5>
+                        <h5 class="card-text">{{ profile_count }} profiles in the database.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Skills Section -->
+        <div class="row">
+            <div class="col-md-12 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-cogs"></i> Top Skills
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Most Common Skills</h5>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Skill</th>
+                                    <th>Number of People</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for skill, count in top_skills %}
+                                <tr>
+                                    <td>{{ skill }}</td>
+                                    <td>{{ count }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                        <div class="d-flex justify-content-end">
+                            <a href="/add" class="btn btn-custom">Add New Profile</a>
+                            <a href="/profiles" class="btn btn-custom ml-3">View All Profiles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/png" href="/static/images/favicon.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profiles Management</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJd4Z3jP6RHI4AfNEsh6bmQjE55M1wW+0EBclzqZ5V/xD+5QdE6yCVzS7A1b8" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f7f9fc;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero-section {
+            background-color: #4e73df;
+            color: white;
+            padding: 120px 30px;
+            text-align: center;
+            border-bottom: 2px solid #e0e0e0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #f8f9fc;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+    text-decoration: none; /* Removes underline */
+}
+
+.cta-buttons .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 123, 255, 0.2);
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(40, 167, 69, 0.2);
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: #218838;
+    box-shadow: 0px 6px 12px rgba(40, 167, 69, 0.3);
+}
+
+        .info-section {
+            padding: 80px 30px;
+            text-align: center;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            margin-top: -60px;
+            z-index: 1;
+            margin-bottom: 100px;
+        }
+
+        .info-section h2 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .info-section p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            margin-top: 50px;
+        }
+
+        .footer a {
+            color: #f8f9fc;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* For smaller devices */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                padding: 15px 0;
+            }
+
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .info-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Welcome to LinkedIn Profiles Management</h1>
+        <p>Your hub for managing LinkedIn profiles with ease. Create, edit, and delete profiles to keep them up-to-date with the latest information. Built using MongoDB for high performance and scalability.</p>
+
+        <div class="cta-buttons">
+            <a href="/dashboard" class="btn btn-primary">Go to Dashboard</a>
+            <a href="/profiles" class="btn btn-secondary">View Profiles</a>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <h2>What is MongoDB?</h2>
+        <p>MongoDB is a powerful, flexible, and scalable NoSQL database used to store and manage data in a JSON-like format. It is known for its ability to handle large volumes of unstructured data and provide fast access to it, making it ideal for dynamic applications like this one. Here, MongoDB is used to manage LinkedIn profiles efficiently and reliably.</p>
+
+        <div class="cta-buttons">
+            <a href="/add" class="btn btn-primary">Add New Profile</a>
+            <a href="/profiles" class="btn btn-secondary">View All Profiles</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 BSDSF21M020 - Bushra Shahbaz. All rights reserved.</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <!-- Bootstrap JS (Optional for additional components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-Oo9tYAOu3TQkt1/hz2mDA0WaC1qu3P5I2X3ivP7sTnY=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
