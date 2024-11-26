@@ -247,7 +247,3 @@ This project is licensed under the MIT License. You are free to use, modify, and
 ---
 
 
-
-LinkedProfile Manager
-
-A Flask-based application to efficiently manage professional profiles. Includes features for adding, editing, viewing, and deleting profiles stored in MongoDB, with a skill dashboard for insights. Fully equipped with API support, a modern UI, and interactive dashboards for analytics
