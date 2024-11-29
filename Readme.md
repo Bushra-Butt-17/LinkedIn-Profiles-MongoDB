@@ -209,6 +209,9 @@ Profiles are stored in MongoDB in the following format:
 
 ## 🎥 Video Demonstration
 
+https://github.com/user-attachments/assets/24b132a8-9c23-4b57-8bdb-40b68cbda8b1
+
+
 https://github.com/user-attachments/assets/f570b78a-e5b6-4708-a773-3818417efed7
 
 ---
