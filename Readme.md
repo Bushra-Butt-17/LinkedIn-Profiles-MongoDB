@@ -209,10 +209,7 @@ Profiles are stored in MongoDB in the following format:
 
 ## 🎥 Video Demonstration
 
-<video controls width="640" height="360">
-  <source src=["https://github.com/Bushra-Butt-17/LinkedIn-Profiles-MongoDB/raw/main/static/videos/video-testing.mp4"](https://github.com/Bushra-Butt-17/LinkedIn-Profiles-MongoDB/blob/main/static/videos/video-testing.mp4) type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/user-attachments/assets/f570b78a-e5b6-4708-a773-3818417efed7
 
 ---
 
