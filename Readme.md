@@ -208,8 +208,7 @@ Profiles are stored in MongoDB in the following format:
 ---
 
 ## **🎥 Video Demonstration**
-
-[![Watch Video](static/videos/video-testing.mp4)](static/videos/video-testing.mp4)
+https://github.com/Bushra-Butt-17/LinkedIn-Profiles-MongoDB/blob/main/static/videos/video-testing.mp4
 
 Click the thumbnail to watch a complete walkthrough of the project! 🎥
 
