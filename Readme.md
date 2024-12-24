@@ -32,7 +32,7 @@ Welcome to the **LinkedIn Profile Management System**, a feature-rich web applic
 ### **Installation**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Bushra-Butt-17/linked-profile-manager.git
+   git clone https://github.com/Bushra-Butt-17/LinkedIn-Profiles-MongoDB.git
    cd linked-profile-manager
    ```
 2. Install required dependencies:
